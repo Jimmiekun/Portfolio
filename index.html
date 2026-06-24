@@ -26,7 +26,7 @@
                 Crafting High-Quality <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-violet-400 bg-clip-text text-transparent">Digital Assets</span> that Drive Engagement.
             </h1>
             <p class="text-zinc-400 text-lg md:text-xl mb-8">
-                Specializing in modern Web Development, high-retention Video Editing, and foundational 3D Modeling. Built for speed, precision, and impact.
+                Specializing in modern Web Development. I also build high-retention Video Content and foundational 3D Assets engineered for maximum impact.
             </p>
             <a href="https://wa.me/2348167571656" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-zinc-950 font-bold px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/20 hover:scale-[1.02] transition-all">
                 <i data-lucide="phone" class="w-5 h-5 fill-current"></i> Message on WhatsApp
@@ -64,18 +64,11 @@
     <!-- Portfolio Section -->
     <section class="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-900">
         <h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
-            <i data-lucide="layers" class="w-5 h-5 text-emerald-400"></i> Selected Work
+            <i data-lucide="layers" class="w-5 h-5 text-emerald-400"></i> Featured Web Projects
         </h2>
-        
-        <!-- Tabs Nav -->
-        <div class="flex gap-2 border-b border-zinc-800 pb-4 mb-8 overflow-x-auto">
-            <button onclick="switchTab('web')" id="tab-web" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-zinc-800 text-white border border-zinc-700">Web Dev</button>
-            <button onclick="switchTab('video')" id="tab-video" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors text-zinc-400 hover:text-zinc-200">Video Content</button>
-            <button onclick="switchTab('3d')" id="tab-3d" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors text-zinc-400 hover:text-zinc-200">3D Assets</button>
-        </div>
 
         <!-- Tab Contents -->
-        <div id="content-web" class="tab-content grid md:grid-cols-2 gap-6">
+        <div class="grid md:grid-cols-2 gap-6">
             <!-- Project 1: VibeVault -->
             <a href="https://ason-vibevault.netlify.app/" target="_blank" class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group hover:border-zinc-700 transition-colors block">
                 <div class="aspect-video bg-zinc-800/60 flex flex-col items-center justify-center border-b border-zinc-800 relative overflow-hidden">
@@ -95,36 +88,12 @@
             <!-- Project 2: Agentic UI -->
             <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group">
                 <div class="aspect-video bg-zinc-800/30 flex items-center justify-center border-b border-zinc-800">
-                    <i data-lucide="monitor" class="w-12 h-12 text-zinc-600"></i>
+                    <i data-lucide="monitor" class="w-12 h-12 text-emerald-400 group-hover:scale-110 transition-transform"></i>
                 </div>
                 <div class="p-6">
                     <h4 class="font-bold text-lg mb-1">Agentic UI System</h4>
                     <p class="text-zinc-400 text-sm mb-4">An interactive, generative AI-driven UI design system component library build context.</p>
                     <span class="text-xs font-mono px-2.5 py-1 bg-zinc-800 border border-zinc-700 text-zinc-300 rounded-md">Tailwind / JS</span>
-                </div>
-            </div>
-        </div>
-
-        <div id="content-video" class="tab-content grid md:grid-cols-2 gap-6 hidden">
-            <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group">
-                <div class="aspect-video bg-zinc-800 flex items-center justify-center border-b border-zinc-800">
-                    <i data-lucide="play" class="w-12 h-12 text-zinc-700 group-hover:scale-110 transition-transform"></i>
-                </div>
-                <div class="p-6">
-                    <h4 class="font-bold text-lg mb-1">High-Retention Podcast Hook</h4>
-                    <p class="text-zinc-400 text-sm mb-4">Dynamic text animations, strategic jump-cuts, and precise audio pacing engineering.</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="content-3d" class="tab-content grid md:grid-cols-2 gap-6 hidden">
-            <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group">
-                <div class="aspect-video bg-zinc-800 flex items-center justify-center border-b border-zinc-800">
-                    <i data-lucide="shapes" class="w-12 h-12 text-zinc-700 group-hover:scale-110 transition-transform"></i>
-                </div>
-                <div class="p-6">
-                    <h4 class="font-bold text-lg mb-1">Geometric Hard-Surface Model</h4>
-                    <p class="text-zinc-400 text-sm mb-4">Clean low-poly meshes and foundational procedural texture layouts.</p>
                 </div>
             </div>
         </div>
@@ -165,21 +134,8 @@
         &copy; 2026 Jason. All rights reserved.
     </footer>
 
-    <!-- Interactive Script -->
     <script>
         lucide.createIcons();
-
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-            document.getElementById('content-' + tabId).classList.remove('hidden');
-            
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.className = "tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors text-zinc-400 hover:text-zinc-200";
-            });
-            
-            const activeBtn = document.getElementById('tab-' + tabId);
-            activeBtn.className = "tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-zinc-800 text-white border border-zinc-700";
-        }
     </script>
 </body>
 </html>
