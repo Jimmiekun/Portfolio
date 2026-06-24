@@ -92,34 +92,13 @@
         </div>
     </section>
 
-    <section class="max-w-xl mx-auto px-6 py-16 border-t border-zinc-900">
-        <h2 class="text-2xl font-bold mb-2 text-center">Let's Build Something</h2>
-        <p class="text-zinc-400 text-sm text-center mb-8">Fill out the details below to secure a quote or ask a question.</p>
+    <section class="max-w-xl mx-auto px-6 py-16 border-t border-zinc-900 text-center">
+        <h2 class="text-2xl font-bold mb-2">Let's Build Something</h2>
+        <p class="text-zinc-400 text-sm mb-8">Have a project in mind? Let's discuss details and secure a quote.</p>
         
-        <form class="space-y-4" id="contactForm">
-            <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Name</label>
-                <input type="text" id="clientName" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors" placeholder="Your name">
-            </div>
-            <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Project Requirements</label>
-                <textarea id="projectDetails" rows="4" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors resize-none" placeholder="What are you looking to create?"></textarea>
-            </div>
-            <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Budget Range</label>
-                <select id="budgetScope" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors text-zinc-400">
-                    <option value="" disabled selected>Select budget scope...</option>
-                    <option value="Standard Website Build">Standard Website Build</option>
-                    <option value="Short-form Video Production Package">Short-form Video Production Package</option>
-                    <option value="Custom 3D Asset Package">Custom 3D Asset Package</option>
-                </select>
-            </div>
-            <button type="submit" class="w-full bg-zinc-100 text-zinc-950 font-bold py-3.5 rounded-lg text-sm hover:bg-zinc-200 active:scale-[0.99] transition-all">Submit Details</button>
-        </form>
-
-        <div class="text-center mt-6">
-            <a href="https://wa.me/2348167571656" target="_blank" class="text-xs text-zinc-500 hover:text-emerald-400 font-medium transition-colors">Prefer texting? Chat directly on WhatsApp</a>
-        </div>
+        <a href="https://wa.me/2348167571656" target="_blank" class="block w-full bg-zinc-100 text-zinc-950 font-bold py-4 rounded-xl text-sm hover:bg-zinc-200 active:scale-[0.99] transition-all shadow-lg">
+            Start Project on WhatsApp
+        </a>
     </section>
 
     <footer class="text-center py-8 text-xs text-zinc-600 border-t border-zinc-900/50">
@@ -128,21 +107,6 @@
 
     <script>
         lucide.createIcons();
-
-        // Handle Form Submission and Redirect to WhatsApp
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('clientName').value;
-            const details = document.getElementById('projectDetails').value;
-            const budget = document.getElementById('budgetScope').value;
-            
-            // Format the text string for custom WhatsApp message layout
-            const whatsappText = `Hello Jason, I filled out your portfolio form:%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Requirements:* ${encodeURIComponent(details)}%0A*Budget Scope:* ${encodeURIComponent(budget)}`;
-            
-            // Redirect window configuration
-            window.open(`https://wa.me/2348167571656?text=${whatsappText}`, '_blank');
-        });
     </script>
 </body>
 </html>
