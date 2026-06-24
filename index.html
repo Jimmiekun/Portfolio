@@ -9,7 +9,6 @@
 </head>
 <body class="bg-[#09090b] text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
 
-    <!-- Navbar -->
     <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#09090b]/80 border-b border-zinc-800/50 px-6 py-4">
         <div class="max-w-5xl mx-auto flex justify-between items-center">
             <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">JASON</span>
@@ -19,7 +18,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center md:text-left md:flex md:items-center md:justify-between md:gap-12">
         <div class="max-w-2xl">
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-none mb-6">
@@ -34,7 +32,6 @@
         </div>
     </section>
 
-    <!-- Services / Skills -->
     <section class="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-900">
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl">
@@ -61,15 +58,12 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section class="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-900">
         <h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
             <i data-lucide="layers" class="w-5 h-5 text-emerald-400"></i> Featured Web Projects
         </h2>
 
-        <!-- Tab Contents -->
         <div class="grid md:grid-cols-2 gap-6">
-            <!-- Project 1: VibeVault -->
             <a href="https://ason-vibevault.netlify.app/" target="_blank" class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group hover:border-zinc-700 transition-colors block">
                 <div class="aspect-video bg-zinc-800/60 flex flex-col items-center justify-center border-b border-zinc-800 relative overflow-hidden">
                     <i data-lucide="external-link" class="w-5 h-5 text-zinc-500 absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
@@ -85,7 +79,6 @@
                 </div>
             </a>
 
-            <!-- Project 2: Agentic UI -->
             <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group">
                 <div class="aspect-video bg-zinc-800/30 flex items-center justify-center border-b border-zinc-800">
                     <i data-lucide="monitor" class="w-12 h-12 text-emerald-400 group-hover:scale-110 transition-transform"></i>
@@ -99,30 +92,29 @@
         </div>
     </section>
 
-    <!-- Contact Form -->
     <section class="max-w-xl mx-auto px-6 py-16 border-t border-zinc-900">
         <h2 class="text-2xl font-bold mb-2 text-center">Let's Build Something</h2>
         <p class="text-zinc-400 text-sm text-center mb-8">Fill out the details below to secure a quote or ask a question.</p>
         
-        <form class="space-y-4" onsubmit="event.preventDefault();">
+        <form class="space-y-4" id="contactForm">
             <div>
                 <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Name</label>
-                <input type="text" class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors" placeholder="Your name">
+                <input type="text" id="clientName" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors" placeholder="Your name">
             </div>
             <div>
                 <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Project Requirements</label>
-                <textarea rows="4" class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors resize-none" placeholder="What are you looking to create?"></textarea>
+                <textarea id="projectDetails" rows="4" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors resize-none" placeholder="What are you looking to create?"></textarea>
             </div>
             <div>
                 <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Budget Range</label>
-                <select class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors text-zinc-400">
-                    <option>Select budget scope...</option>
-                    <option>Standard Website Build</option>
-                    <option>Short-form Video Production Package</option>
-                    <option>Custom 3D Asset Package</option>
+                <select id="budgetScope" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors text-zinc-400">
+                    <option value="" disabled selected>Select budget scope...</option>
+                    <option value="Standard Website Build">Standard Website Build</option>
+                    <option value="Short-form Video Production Package">Short-form Video Production Package</option>
+                    <option value="Custom 3D Asset Package">Custom 3D Asset Package</option>
                 </select>
             </div>
-            <button class="w-full bg-zinc-100 text-zinc-950 font-bold py-3.5 rounded-lg text-sm hover:bg-zinc-200 active:scale-[0.99] transition-all">Submit Details</button>
+            <button type="submit" class="w-full bg-zinc-100 text-zinc-950 font-bold py-3.5 rounded-lg text-sm hover:bg-zinc-200 active:scale-[0.99] transition-all">Submit Details</button>
         </form>
 
         <div class="text-center mt-6">
@@ -136,6 +128,21 @@
 
     <script>
         lucide.createIcons();
+
+        // Handle Form Submission and Redirect to WhatsApp
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('clientName').value;
+            const details = document.getElementById('projectDetails').value;
+            const budget = document.getElementById('budgetScope').value;
+            
+            // Format the text string for custom WhatsApp message layout
+            const whatsappText = `Hello Jason, I filled out your portfolio form:%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Requirements:* ${encodeURIComponent(details)}%0A*Budget Scope:* ${encodeURIComponent(budget)}`;
+            
+            // Redirect window configuration
+            window.open(`https://wa.me/2348167571656?text=${whatsappText}`, '_blank');
+        });
     </script>
 </body>
 </html>
