@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#09090b] text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#09090b]/80 border-b border-zinc-800/50 px-6 py-4">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">JASON</span>
+            <a href="https://wa.me/2348167571656" target="_blank" class="flex items-center gap-2 bg-zinc-900 border border-zinc-800 hover:border-emerald-500/50 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i> Chat
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center md:text-left md:flex md:items-center md:justify-between md:gap-12">
+        <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-none mb-6">
+                Crafting High-Quality <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-violet-400 bg-clip-text text-transparent">Digital Assets</span> that Drive Engagement.
+            </h1>
+            <p class="text-zinc-400 text-lg md:text-xl mb-8">
+                Specializing in modern Web Development, high-retention Video Editing, and foundational 3D Modeling. Built for speed, precision, and impact.
+            </p>
+            <a href="https://wa.me/2348167571656" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-zinc-950 font-bold px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/20 hover:scale-[1.02] transition-all">
+                <i data-lucide="phone" class="w-5 h-5 fill-current"></i> Message on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Services / Skills -->
+    <section class="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-900">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 mb-4">
+                    <i data-lucide="code" class="w-6 h-6 text-emerald-400"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Web Development</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Building lightning-fast, ultra-responsive modern user interfaces optimized for maximum retention and conversion.</p>
+            </div>
+            <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 mb-4">
+                    <i data-lucide="video" class="w-6 h-6 text-cyan-400"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Video Editing</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Crafting high-retention short-form content, viral podcast hooks, and dynamic pacing to hold audience attention.</p>
+            </div>
+            <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 rounded-2xl">
+                <div class="w-12 h-12 rounded-xl bg-violet-500/10 flex items-center justify-center border border-violet-500/20 mb-4">
+                    <i data-lucide="box" class="w-6 h-6 text-violet-400"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">3D Modeling</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Creating clean 3D operational assets, hard-surface structural models, and basic environment geometries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-900">
+        <h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
+            <i data-lucide="layers" class="w-5 h-5 text-emerald-400"></i> Selected Work
+        </h2>
+        
+        <!-- Tabs Nav -->
+        <div class="flex gap-2 border-b border-zinc-800 pb-4 mb-8 overflow-x-auto">
+            <button onclick="switchTab('web')" id="tab-web" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-zinc-800 text-white border border-zinc-700">Web Dev</button>
+            <button onclick="switchTab('video')" id="tab-video" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors text-zinc-400 hover:text-zinc-200">Video Content</button>
+            <button onclick="switchTab('3d')" id="tab-3d" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors text-zinc-400 hover:text-zinc-200">3D Assets</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="content-web" class="tab-content grid md:grid-cols-2 gap-6">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group">
+                <div class="aspect-video bg-zinc-800 flex items-center justify-center border-b border-zinc-800">
+                    <i data-lucide="monitor" class="w-12 h-12 text-zinc-700 group-hover:scale-110 transition-transform"></i>
+                </div>
+                <div class="p-6">
+                    <h4 class="font-bold text-lg mb-1">Agentic UI System</h4>
+                    <p class="text-zinc-400 text-sm mb-4">An interactive, generative AI-driven UI design system component library.</p>
+                    <span class="text-xs font-mono px-2.5 py-1 bg-zinc-800 border border-zinc-700 text-zinc-300 rounded-md">Tailwind / JS</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-video" class="tab-content grid md:grid-cols-2 gap-6 hidden">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group">
+                <div class="aspect-video bg-zinc-800 flex items-center justify-center border-b border-zinc-800">
+                    <i data-lucide="play" class="w-12 h-12 text-zinc-700 group-hover:scale-110 transition-transform"></i>
+                </div>
+                <div class="p-6">
+                    <h4 class="font-bold text-lg mb-1">High-Retention Podcast Hook</h4>
+                    <p class="text-zinc-400 text-sm mb-4">Dynamic text animations, strategic jump-cuts, and precise audio pacing engineering.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-3d" class="tab-content grid md:grid-cols-2 gap-6 hidden">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden group">
+                <div class="aspect-video bg-zinc-800 flex items-center justify-center border-b border-zinc-800">
+                    <i data-lucide="shapes" class="w-12 h-12 text-zinc-700 group-hover:scale-110 transition-transform"></i>
+                </div>
+                <div class="p-6">
+                    <h4 class="font-bold text-lg mb-1">Geometric Hard-Surface Model</h4>
+                    <p class="text-zinc-400 text-sm mb-4">Clean low-poly meshes and foundational procedural texture layouts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="max-w-xl mx-auto px-6 py-16 border-t border-zinc-900">
+        <h2 class="text-2xl font-bold mb-2 text-center">Let's Build Something</h2>
+        <p class="text-zinc-400 text-sm text-center mb-8">Fill out the details below to secure a quote or ask a question.</p>
+        
+        <form class="space-y-4" onsubmit="event.preventDefault();">
+            <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Name</label>
+                <input type="text" class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors" placeholder="Your name">
+            </div>
+            <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Project Requirements</label>
+                <textarea rows="4" class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors resize-none" placeholder="What are you looking to create?"></textarea>
+            </div>
+            <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Budget Range</label>
+                <select class="w-full bg-zinc-900 border border-zinc-800 focus:border-emerald-500 rounded-lg px-4 py-3 text-sm outline-none transition-colors text-zinc-400">
+                    <option>Select budget scope...</option>
+                    <option>Standard Website Build</option>
+                    <option>Short-form Video Production Package</option>
+                    <option>Custom 3D Asset Package</option>
+                </select>
+            </div>
+            <button class="w-full bg-zinc-100 text-zinc-950 font-bold py-3.5 rounded-lg text-sm hover:bg-zinc-200 active:scale-[0.99] transition-all">Submit Details</button>
+        </form>
+
+        <div class="text-center mt-6">
+            <a href="https://wa.me/2348167571656" target="_blank" class="text-xs text-zinc-500 hover:text-emerald-400 font-medium transition-colors">Prefer texting? Chat directly on WhatsApp</a>
+        </div>
+    </section>
+
+    <footer class="text-center py-8 text-xs text-zinc-600 border-t border-zinc-900/50">
+        &copy; 2026 Jason. All rights reserved.
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        lucide.createIcons();
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('content-' + tabId).classList.remove('hidden');
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors text-zinc-400 hover:text-zinc-200";
+            });
+            
+            const activeBtn = document.getElementById('tab-' + tabId);
+            activeBtn.className = "tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-zinc-800 text-white border border-zinc-700";
+        }
+    </script>
+</body>
+</html>
